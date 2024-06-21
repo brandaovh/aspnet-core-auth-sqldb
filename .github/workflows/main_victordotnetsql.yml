@@ -26,15 +26,6 @@ jobs:
           dotnet-version: '8.x'
           include-prerelease: true
 
-      - name: Set up Azure WebApp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'victordotnetsql'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: './publish'
-        env:
-          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
-
       - name: Check database connection string environment variable
         run: echo "DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }}" >> $GITHUB_ENV
 
@@ -71,3 +62,5 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2BF54C9B6EAE43B7B8D22D1113B20A24 }}
+        env:
+          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
