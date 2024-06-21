@@ -26,7 +26,16 @@ jobs:
           dotnet-version: '8.x'
           include-prerelease: true
 
-      - name: Set database connection string environment variable
+      - name: Set up Azure WebApp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'victordotnetsql'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: './publish'
+        env:
+          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+
+      - name: Check database connection string environment variable
         run: echo "DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }}" >> $GITHUB_ENV
 
       - name: Build with dotnet
