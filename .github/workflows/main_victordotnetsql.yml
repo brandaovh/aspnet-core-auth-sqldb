@@ -40,15 +40,6 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: Add Microsoft.VisualStudio.Web.CodeGeneration.Design package
-        run: dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-
-      - name: Install dotnet-aspnet-codegenerator tool
-        run: dotnet tool install -g dotnet-aspnet-codegenerator
-
-      - name: Generate Razor pages
-        run: dotnet-aspnet-codegenerator razorpage -m Contact -udl -dc ApplicationDbContext -outDir Pages/Contacts --referenceScriptLibraries
-
       - name: Drop database
         run: dotnet ef database drop -f
 
