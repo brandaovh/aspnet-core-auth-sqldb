@@ -46,8 +46,20 @@ jobs:
       - name: Install dotnet-aspnet-codegenerator tool
         run: dotnet tool install -g dotnet-aspnet-codegenerator
 
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore
+
+      - name: Install Entity Framework Core tools
+        run: dotnet tool install --global dotnet-ef
+
       - name: Generate Razor pages
         run: dotnet-aspnet-codegenerator razorpage -m Contact -udl -dc ApplicationDbContext -outDir Pages/Contacts --referenceScriptLibraries
+        env:
+          DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+          ASPNETCORE_ENVIRONMENT: Production
 
       - name: Drop database
         run: dotnet ef database drop -f
@@ -87,3 +99,4 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2BF54C9B6EAE43B7B8D22D1113B20A24 }}
         env:
           DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+          
