@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Data;
-using WebApplication1.Models;
+using ContactManager.Data;
+using ContactManager.Models;
 
-namespace WebApplication1.Pages.Contacts
+namespace ContactManager.Pages.Contacts
 {
     public class EditModel : PageModel
     {
-        private readonly WebApplication1.Data.ApplicationDbContext _context;
+        private readonly ContactManager.Data.ApplicationDbContext _context;
 
-        public EditModel(WebApplication1.Data.ApplicationDbContext context)
+        public EditModel(ContactManager.Data.ApplicationDbContext context)
         {
             _context = context;
         }

@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using WebApplication1.Data;
-using WebApplication1.Models;
+using ContactManager.Data;
+using ContactManager.Models;
 
-namespace WebApplication1.Pages.Contacts
+namespace ContactManager.Pages.Contacts
 {
     public class CreateModel : PageModel
     {
-        private readonly WebApplication1.Data.ApplicationDbContext _context;
+        private readonly ContactManager.Data.ApplicationDbContext _context;
 
-        public CreateModel(WebApplication1.Data.ApplicationDbContext context)
+        public CreateModel(ContactManager.Data.ApplicationDbContext context)
         {
             _context = context;
         }
