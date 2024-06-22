@@ -31,9 +31,7 @@ namespace ContactManager.Data
                     City = "Redmond",
                     State = "WA",
                     Zip = "10999",
-                    Email = "debra@example.com",
-                    Status = ContactStatus.Approved,
-                    OwnerID = adminID
+                    Email = "debra@example.com"
                 },
                 new Contact
                 {
@@ -42,9 +40,7 @@ namespace ContactManager.Data
                     City = "Redmond",
                     State = "WA",
                     Zip = "10999",
-                    Email = "thorsten@example.com",
-                    Status = ContactStatus.Approved,
-                    OwnerID = adminID
+                    Email = "thorsten@example.com"
                 },
                 new Contact
                 {
@@ -53,9 +49,7 @@ namespace ContactManager.Data
                     City = "Redmond",
                     State = "WA",
                     Zip = "10999",
-                    Email = "yuhong@example.com",
-                    Status = ContactStatus.Approved,
-                    OwnerID = adminID
+                    Email = "yuhong@example.com"
                 },
                 new Contact
                 {
@@ -64,9 +58,7 @@ namespace ContactManager.Data
                     City = "Redmond",
                     State = "WA",
                     Zip = "10999",
-                    Email = "jon@example.com",
-                    Status = ContactStatus.Rejected,
-                    OwnerID = adminID
+                    Email = "jon@example.com"
                 },
                 new Contact
                 {
@@ -75,9 +67,7 @@ namespace ContactManager.Data
                     City = "Redmond",
                     State = "WA",
                     Zip = "10999",
-                    Email = "diliana@example.com",
-                    Status = ContactStatus.Approved,
-                    OwnerID = adminID
+                    Email = "diliana@example.com"
                 }
              );
             context.SaveChanges();
