@@ -49,8 +49,8 @@ jobs:
       # - name: Generate Razor pages
       #   run: dotnet-aspnet-codegenerator razorpage -m Contact -udl -dc ApplicationDbContext -outDir Pages/Contacts --referenceScriptLibraries
 
-      # - name: Drop database
-      #   run: dotnet ef database drop -f
+      - name: Drop database
+        run: dotnet ef database drop -f
 
       # - name: Update database
       #   run: dotnet ef database update
