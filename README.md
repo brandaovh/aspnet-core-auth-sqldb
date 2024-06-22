@@ -33,6 +33,7 @@
     <li>Managing and querying data in Azure SQL Database.</li>
     <li>Version control and collaboration using Git/GitHub.</li>
     <li>Automating deployment processes with GitHub Actions.</li>
+    <li>Troubleshooting compatibility issues between local development and Azure Web App deployments.</li>
 </ul>
 <h2>Web Application on Azure</h2>
 <p>Explore the web application following this link:<br><a target="_blank" rel="noopener noreferrer" href="https://dnetauthapp.azurewebsites.net">dnetauthapp.azurewebsites.net</a></p></p>
