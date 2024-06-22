@@ -39,4 +39,4 @@
 <p>Explore the web application following this link:<br><a target="_blank" rel="noopener noreferrer" href="https://victordotnetsql.azurewebsites.net">victordotnetsql.azurewebsites.net</a></p></p>
 <h2>Contact Information</h2>
 <p>Feel free to reach out to me if you have any questions or would like to connect:</p>
-<p>Email: brandaovh@gmail.com<br>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brandaovh/">linkedin.com/in/brandaovh/</a></p>
+<p>Email: <a href="mailto:brandaovh@gmail.com">brandaovh@gmail.com</a><br>LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/brandaovh/">linkedin.com/in/brandaovh/</a></p>
