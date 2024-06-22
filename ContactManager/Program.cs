@@ -32,12 +32,39 @@ builder.Services.AddControllers(config =>
 
 var app = builder.Build();
 
+// Add requirement for secret password
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-
-    await SeedData.Initialize(services);
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    
+    try
+    {
+        context.Database.Migrate();
+        
+        // Retrieve the secret from configuration
+        var testUserPw = builder.Configuration.GetValue<string>("SEEDUSERPW");
+        await SeedData.Initialize(services, testUserPw);
+        
+        // Log successful seed data initialization
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogInformation("Seed data initialized successfully.");
+    }
+    catch (Exception ex)
+    {
+        // Log any exceptions during seed data initialization
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred during seed data initialization.");
+        throw; // Rethrow the exception to halt the application startup
+    }
 }
+
+// using (var scope = app.Services.CreateScope())
+// {
+//     var services = scope.ServiceProvider;
+
+//     await SeedData.Initialize(services);
+// }
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
