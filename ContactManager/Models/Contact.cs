@@ -12,5 +12,13 @@ namespace ContactManager.Models
         public string? Zip { get; set; }
         [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
+        public ContactStatus Status { get; set; }
+    }
+
+    public enum ContactStatus
+    {
+        Submitted,
+        Approved,
+        Rejected
     }
 }
