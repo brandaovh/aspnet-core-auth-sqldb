@@ -94,7 +94,16 @@ namespace ContactManager.Pages.Contacts
                 }
             }
 
-            await Context.SaveChangesAsync();
+            try
+            {
+                Context.Update(Contact); // Attach and set EntityState.Modified
+                await Context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                // Handle concurrency exceptions if needed
+                throw;
+            }
 
             return RedirectToPage("./Index");
         }
