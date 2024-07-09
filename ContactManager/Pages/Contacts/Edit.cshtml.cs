@@ -106,8 +106,6 @@ namespace ContactManager.Pages.Contacts
             }
 
             return RedirectToPage("./Index");
-
-            return RedirectToPage("./Index");
         }
     }
 }
