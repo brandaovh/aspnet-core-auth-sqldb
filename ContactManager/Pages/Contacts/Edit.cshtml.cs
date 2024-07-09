@@ -96,7 +96,7 @@ namespace ContactManager.Pages.Contacts
 
             try
             {
-                Context.Update(Contact); // Attach and set EntityState.Modified
+                Context.Attach(Contact).State = EntityState.Modified;
                 await Context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -104,6 +104,8 @@ namespace ContactManager.Pages.Contacts
                 // Handle concurrency exceptions if needed
                 throw;
             }
+
+            return RedirectToPage("./Index");
 
             return RedirectToPage("./Index");
         }
