@@ -5,11 +5,7 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app">Deploy an ASP.NET Core and Azure SQL Database app to Azure App Service</a></li>
 </ul>
 <h2>Demo Video</h2>
-<p>Take a look at the web application's demo video:</p>
-<video controls>
-    <source src="/videos/demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<p>A video demonstrating the structure of the application and its use is available in the web application.</p>
 <h2>How to Use the Application</h2>
 <p>The web application interacts with an Azure SQL Database to perform CRUD (Create, Read, Update, Delete) operations on data.</p>
 <p>Access to the database is regulated via a role-based authorization. Here's how the authorization and authentication mechanisms might work for each level:</p>
