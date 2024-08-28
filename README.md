@@ -4,8 +4,6 @@
     <li><a target="_blank" rel="noopener noreferrer" href="https://learn.microsoft.com/en-us/aspnet/core/security/authorization/secure-data?view=aspnetcore-8.0">Create an ASP.NET Core web app with user data protected by authorization</a></li>
     <li><a target="_blank" rel="noopener noreferrer" href="https://learn.microsoft.com/en-us/azure/app-service/tutorial-dotnetcore-sqldb-app">Deploy an ASP.NET Core and Azure SQL Database app to Azure App Service</a></li>
 </ul>
-<h2>Demo Video</h2>
-<p>A video demonstrating the structure of the application and its use is available in the web application.</p>
 <h2>How to Use the Application</h2>
 <p>The web application interacts with an Azure SQL Database to perform CRUD (Create, Read, Update, Delete) operations on data.</p>
 <p>Access to the database is regulated via a role-based authorization. Here's how the authorization and authentication mechanisms might work for each level:</p>
